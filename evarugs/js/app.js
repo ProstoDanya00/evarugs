@@ -6,9 +6,19 @@ const swiper = new Swiper('.swiper', {
     centeredSlides: true,
     slideToClickedSlide: true,
     toggle: true,
-    breakpoints: {
-        320: {
-            slidesPerView: 1,
-        }
+});
+
+const modalWindow = document.querySelector('.modal');
+const buttonModal = document.querySelector('.main-display__button');
+
+buttonModal.addEventListener('click', () => {
+    modalWindow.classList.add('active');
+});
+
+modalWindow.addEventListener('click', (event) => {
+    const isModal = event.target.closest('.modal__inner');
+    if (!isModal) {
+        modalWindow.classList.remove('active');
     }
 });
+

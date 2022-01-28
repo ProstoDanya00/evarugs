@@ -62,7 +62,7 @@
                             <div class="main-display__header">EVARGUS</div>
                         </div>
                         <ul class="main-display__nav">
-                            <li><a href="#">Отзывы</a></li>
+                            <li><a href="#review">Отзывы</a></li>
                             <li><a href="#about">Что это?</a></li>
                             <li><a href="#footer__contacts">Контакты</a></li>
                         </ul>
@@ -71,7 +71,7 @@
                         <div class="main-display__left">
                             <h1 class="main-display__title">Инновационные коврики для автомобиля</h1>
                             <div class="main-display__subtitle">В вашем городе</div>
-                            <button type="button" class="main-display__button">Заказать</button>
+                            <button type="button" class="main-display__button"><span>Заказать</span></button>
                         </div>
                         <div class="main-display__right">
                             <img src="img/main-img.png" alt="">
@@ -128,7 +128,7 @@
             </div>
         </div>
 
-        <div class="review">
+        <div class="review" id="review">
             <div class="review__slider swiper">
                 <div class="swiper-wrapper review__wrapper">
                     <div class="review__slide swiper-slide">
@@ -240,6 +240,34 @@
             </div>
         </div>
     </footer>
+
+    <form action="#" class="modal">
+        <div class="modal__inner">
+            <div class="modal__inner-header">Форма заявки</div>
+            <div class="modal__inner-element">
+                <div class="modal__item">
+                    <div class="modal__wrap-input">
+                        <input type="text" placeholder="Ваше имя">
+                    </div>
+                    <div class="modal__wrap-input">
+                        <input type="email" placeholder="Ваш e-mail">
+                    </div>
+                </div>
+                <div class="modal__item modal__item-long">
+                    <textarea class="modal__message" name="text" id="" cols="30" rows="10"
+                        placeholder="Ваше сообщение (марка автомобиля, цвет ковриков, номер телефона)"></textarea>
+                </div>
+                <div class="modal__policy">
+                    <input type="checkbox" id="modal__check">
+                    <label for="modal__check">
+                        <span>Я соглашаюсь с</span>
+                        <a href="#">Политикой безопасности</a>
+                    </label>
+                </div>
+                <button type="button" class="main-display__button modal__button">Отправить</button>
+            </div>
+        </div>
+    </form>
 
     <script src="js/swiper-bundle.js"></script>
     <script src="js/app.js"></script>
